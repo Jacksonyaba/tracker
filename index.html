@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/js/countrySelect.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/css/countrySelect.min.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG02JaNTqfLsySxZFAyyRQ0pyoRyB2hrk&libraries=places"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Phone Tracker Intelligence Dashboard</h1>
+
+    <div class="form-section">
+      <h2>Track Criminal</h2>
+      <div class="form1-section">
+        <input type="text" id="countryCode1" class="country-code" placeholder="Country Code">
+        <input type="text" id="criminalPhone" placeholder="Enter Phone Number">
+        <button onclick="trackCriminal()">Track</button>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Track Stolen Phone</h2>
+      <div class="form1-section">
+        <input type="text" id="countryCode2" class="country-code" placeholder="Country Code">
+        <input type="text" id="lostPhone" placeholder="Enter Phone Number">
+        <input type="text" id="imei" placeholder="Enter IMEI Code">
+        <button onclick="trackLostPhone()">Track</button>
+      </div>
+    </div>
+
+    <div id="map"></div>
+    <div id="phoneInfo"></div>
+  </div>
+  <div id="log-section">
+    <h3>Tracking History</h3>
+    <div class="table-controls">
+      <button onclick="clearHistory()">Clear All</button>
+      <input type="text" id="searchHistory" placeholder="Search history...">
+    </div>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>Phone Number</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Coordinates</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

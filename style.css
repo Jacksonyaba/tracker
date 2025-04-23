@@ -1,0 +1,174 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: black;
+}
+
+.container {
+  grid-column: 1;
+  max-width: 800px;
+  margin: 0;
+  padding: 20px;
+  max-height: 380px;
+}
+
+#log-section {
+  grid-column: 2;
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 500px;
+  margin-left: 90px;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: green;
+}
+
+h2 {
+  text-align: center;
+  color: green;
+  margin-left: 0;
+}
+
+h3 {
+  margin-left: 0;
+  color: green;
+  text-align: center;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  margin-left: 0;
+}
+
+.form1-section {
+  margin-left: 100px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+  font-weight: bolder;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #333;
+  margin-top: 20px;
+}
+
+#historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+#historyTable th, #historyTable td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: center;
+}
+
+#historyTable th {
+  background-color: #333;
+  color: #0f0;
+}
+
+.active {
+  color: lime;
+  font-weight: bold;
+}
+
+.inactive {
+  color: red;
+  font-weight: bold;
+}
+
+/* Previous CSS remains the same, add these new styles */
+
+.country-code {
+  width: 100px !important;
+}
+
+#phoneInfo {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 5px;
+  display: none;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-controls button {
+  background-color: #dc3545;
+}
+
+.table-controls button:hover {
+  background-color: #c82333;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  margin: 0 2px;
+  font-size: 12px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.recenter-btn {
+  background-color: #28a745;
+}
+
+#searchHistory {
+  width: 200px;
+  padding: 8px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  body {
+      grid-template-columns: 1fr;
+  }
+  
+  .container, #log-section {
+      grid-column: 1;
+      max-width: 100%;
+  }
+  
+  #log-section {
+      position: static;
+      order: -1;
+  }
+}
